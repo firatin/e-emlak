@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E914C1CF-C57C-4709-870E-A79AE5D1B149}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WEBEmlak</RootNamespace>
+    <AssemblyName>WEBEmlak</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\ErsinEmlak\Emlak\Emlak\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\ErsinEmlak\Emlak\Emlak\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>..\..\ErsinEmlak\Emlak\Emlak\bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CollectionPager">
+      <HintPath>..\..\ErsinEmlak\Emlak\Emlak\bin\CollectionPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ara.aspx" />
+    <Content Include="Basvuru.aspx" />
+    <Content Include="DanismanDetay.aspx" />
+    <Content Include="Danismanlar.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\realia-blue.css" />
+    <Content Include="css\realia-brown-dark.css" />
+    <Content Include="css\realia-brown.css" />
+    <Content Include="css\realia-gray-blue.css" />
+    <Content Include="css\realia-gray-brown-dark.css" />
+    <Content Include="css\realia-gray-brown.css" />
+    <Content Include="css\realia-gray-green-light.css" />
+    <Content Include="css\realia-gray-green.css" />
+    <Content Include="css\realia-gray-magenta.css" />
+    <Content Include="css\realia-gray-orange.css" />
+    <Content Include="css\realia-gray-red.css" />
+    <Content Include="css\realia-gray-turquiose.css" />
+    <Content Include="css\realia-gray-violet.css" />
+    <Content Include="css\realia-green-light.css" />
+    <Content Include="css\realia-green.css" />
+    <Content Include="css\realia-magenta.css" />
+    <Content Include="css\realia-orange.css" />
+    <Content Include="css\realia-red.css" />
+    <Content Include="css\realia-turquiose.css" />
+    <Content Include="css\realia-violet.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Haberler.aspx" />
+    <Content Include="ilandetay.aspx" />
+    <Content Include="img\arrow-bottom-black%402x.png" />
+    <Content Include="img\arrow-bottom-black.png" />
+    <Content Include="img\arrow-bottom-white%402x.png" />
+    <Content Include="img\arrow-bottom-white.png" />
+    <Content Include="img\arrow-left-black%402x.png" />
+    <Content Include="img\arrow-left-black.png" />
+    <Content Include="img\arrow-left-white%402x.png" />
+    <Content Include="img\arrow-left-white.png" />
+    <Content Include="img\arrow-right-black%402x.png" />
+    <Content Include="img\arrow-right-black.png" />
+    <Content Include="img\arrow-right-white%402x.png" />
+    <Content Include="img\arrow-right-white.png" />
+    <Content Include="img\banner\1.gif" />
+    <Content Include="img\banner\2.gif" />
+    <Content Include="img\banner\3.gif" />
+    <Content Include="img\banner\4.gif" />
+    <Content Include="img\border-gray.png" />
+    <Content Include="img\border.png" />
+    <Content Include="img\btn-nav%402x.png" />
+    <Content Include="img\btn-nav.png" />
+    <Content Include="img\call-to-action-address%402x.png" />
+    <Content Include="img\call-to-action-address.png" />
+    <Content Include="img\call-to-action-gps%402x.png" />
+    <Content Include="img\call-to-action-gps.png" />
+    <Content Include="img\call-to-action-key%402x.png" />
+    <Content Include="img\call-to-action-key.png" />
+    <Content Include="img\checkbox%402x.png" />
+    <Content Include="img\checkbox-open%402x.png" />
+    <Content Include="img\checkbox-open.png" />
+    <Content Include="img\checkbox.png" />
+    <Content Include="img\combinations\gray-blue%402x.png" />
+    <Content Include="img\combinations\gray-blue.png" />
+    <Content Include="img\combinations\gray-brown%402x.png" />
+    <Content Include="img\combinations\gray-brown-dark%402x.png" />
+    <Content Include="img\combinations\gray-brown-dark.png" />
+    <Content Include="img\combinations\gray-brown.png" />
+    <Content Include="img\combinations\gray-green%402x.png" />
+    <Content Include="img\combinations\gray-green-light%402x.png" />
+    <Content Include="img\combinations\gray-green-light.png" />
+    <Content Include="img\combinations\gray-green.png" />
+    <Content Include="img\combinations\gray-magenta%402x.png" />
+    <Content Include="img\combinations\gray-magenta.png" />
+    <Content Include="img\combinations\gray-orange%402x.png" />
+    <Content Include="img\combinations\gray-orange.png" />
+    <Content Include="img\combinations\gray-red%402x.png" />
+    <Content Include="img\combinations\gray-red.png" />
+    <Content Include="img\combinations\gray-turquiose%402x.png" />
+    <Content Include="img\combinations\gray-turquiose.png" />
+    <Content Include="img\combinations\gray-violet%402x.png" />
+    <Content Include="img\combinations\gray-violet.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\flags\France-Flag%402x.png" />
+    <Content Include="img\flags\France-Flag.png" />
+    <Content Include="img\flags\Germany-Flag%402x.png" />
+    <Content Include="img\flags\Germany-Flag.png" />
+    <Content Include="img\flags\United-Kingdom-Flag%402x.png" />
+    <Content Include="img\flags\United-Kingdom-Flag.png" />
+    <Content Include="img\footer-border%402x.png" />
+    <Content Include="img\footer-border.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\header-1%402x.png" />
+    <Content Include="img\header-1.png" />
+    <Content Include="img\header-2%402x.png" />
+    <Content Include="img\header-2.png" />
+    <Content Include="img\header-3%402x.png" />
+    <Content Include="img\header-3.png" />
+    <Content Include="img\icons\404%402x.png" />
+    <Content Include="img\icons\404.png" />
+    <Content Include="img\icons\address%402x.png" />
+    <Content Include="img\icons\address.png" />
+    <Content Include="img\icons\bathrooms%402x.png" />
+    <Content Include="img\icons\bathrooms-white%402x.png" />
+    <Content Include="img\icons\bathrooms-white.png" />
+    <Content Include="img\icons\bathrooms.png" />
+    <Content Include="img\icons\bedrooms%402x.png" />
+    <Content Include="img\icons\bedrooms-white%402x.png" />
+    <Content Include="img\icons\bedrooms-white.png" />
+    <Content Include="img\icons\bedrooms.png" />
+    <Content Include="img\icons\bubble-address%402x.png" />
+    <Content Include="img\icons\bubble-address.png" />
+    <Content Include="img\icons\bubble-call-us%402x.png" />
+    <Content Include="img\icons\bubble-call-us.png" />
+    <Content Include="img\icons\bubble-email%402x.png" />
+    <Content Include="img\icons\bubble-email.png" />
+    <Content Include="img\icons\cell-phone-gray%402x.png" />
+    <Content Include="img\icons\cell-phone-gray.png" />
+    <Content Include="img\icons\circle-dollar.png" />
+    <Content Include="img\icons\circle-global.png" />
+    <Content Include="img\icons\circle-package.png" />
+    <Content Include="img\icons\circle-search.png" />
+    <Content Include="img\icons\cross%402x.png" />
+    <Content Include="img\icons\cross.png" />
+    <Content Include="img\icons\eye.png" />
+    <Content Include="img\icons\faq-minus%402x.png" />
+    <Content Include="img\icons\faq-minus.png" />
+    <Content Include="img\icons\faq-plus%402x.png" />
+    <Content Include="img\icons\faq-plus.png" />
+    <Content Include="img\icons\features-bootstrap.png" />
+    <Content Include="img\icons\features-custom-widgets.png" />
+    <Content Include="img\icons\features-pencil.png" />
+    <Content Include="img\icons\features-responsive.png" />
+    <Content Include="img\icons\features-retina.png" />
+    <Content Include="img\icons\features-seo.png" />
+    <Content Include="img\icons\gps%402x.png" />
+    <Content Include="img\icons\gps.png" />
+    <Content Include="img\icons\mail%402x.png" />
+    <Content Include="img\icons\mail-gray%402x.png" />
+    <Content Include="img\icons\mail-gray.png" />
+    <Content Include="img\icons\mail.png" />
+    <Content Include="img\icons\mobile%402x.png" />
+    <Content Include="img\icons\mobile.png" />
+    <Content Include="img\icons\nike%402x.png" />
+    <Content Include="img\icons\nike.png" />
+    <Content Include="img\icons\phone-gray%402x.png" />
+    <Content Include="img\icons\phone-gray.png" />
+    <Content Include="img\icons\phone-white%402x.png" />
+    <Content Include="img\icons\phone-white.png" />
+    <Content Include="img\icons\search%402x.png" />
+    <Content Include="img\icons\search.png" />
+    <Content Include="img\icons\skype%402x.png" />
+    <Content Include="img\icons\skype.png" />
+    <Content Include="img\icons\slider-handle%402x.png" />
+    <Content Include="img\icons\slider-handle.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\marker.png" />
+    <Content Include="img\markers\marker-blue%402x.png" />
+    <Content Include="img\markers\marker-brown%402x.png" />
+    <Content Include="img\markers\marker-brown-dark%402x.png" />
+    <Content Include="img\markers\marker-brown-dark.png" />
+    <Content Include="img\markers\marker-brown.png" />
+    <Content Include="img\markers\marker-green%402x.png" />
+    <Content Include="img\markers\marker-green-light%402x.png" />
+    <Content Include="img\markers\marker-green-light.png" />
+    <Content Include="img\markers\marker-green.png" />
+    <Content Include="img\markers\marker-magenta%402x.png" />
+    <Content Include="img\markers\marker-magenta.png" />
+    <Content Include="img\markers\marker-orange%402x.png" />
+    <Content Include="img\markers\marker-orange.png" />
+    <Content Include="img\markers\marker-red%402x.png" />
+    <Content Include="img\markers\marker-red.png" />
+    <Content Include="img\markers\marker-turquiose%402x.png" />
+    <Content Include="img\markers\marker-turquiose.png" />
+    <Content Include="img\markers\marker-violet%402x.png" />
+    <Content Include="img\markers\marker-violet.png" />
+    <Content Include="img\palette-border.png" />
+    <Content Include="img\patterns\large\cloth-alike%402x.png" />
+    <Content Include="img\patterns\large\cloth-alike.png" />
+    <Content Include="img\patterns\large\corrugation%402x.png" />
+    <Content Include="img\patterns\large\corrugation.png" />
+    <Content Include="img\patterns\large\diagonal-noise%402x.png" />
+    <Content Include="img\patterns\large\diagonal-noise.png" />
+    <Content Include="img\patterns\large\dust%402x.png" />
+    <Content Include="img\patterns\large\dust.png" />
+    <Content Include="img\patterns\large\fabric-plaid%402x.png" />
+    <Content Include="img\patterns\large\fabric-plaid.png" />
+    <Content Include="img\patterns\large\farmer%402x.png" />
+    <Content Include="img\patterns\large\farmer.png" />
+    <Content Include="img\patterns\large\grid-noise%402x.png" />
+    <Content Include="img\patterns\large\grid-noise.png" />
+    <Content Include="img\patterns\large\lghtmesh%402x.png" />
+    <Content Include="img\patterns\large\lghtmesh.png" />
+    <Content Include="img\patterns\large\lightpaperfibers%402x.png" />
+    <Content Include="img\patterns\large\lightpaperfibers.png" />
+    <Content Include="img\patterns\large\pw-maze-white%402x.png" />
+    <Content Include="img\patterns\large\pw-maze-white.png" />
+    <Content Include="img\patterns\large\retina-wood%402x.png" />
+    <Content Include="img\patterns\large\retina-wood.png" />
+    <Content Include="img\patterns\small\cloth-alike%402x.png" />
+    <Content Include="img\patterns\small\cloth-alike.png" />
+    <Content Include="img\patterns\small\corrugation%402x.png" />
+    <Content Include="img\patterns\small\corrugation.png" />
+    <Content Include="img\patterns\small\diagonal-noise%402x.png" />
+    <Content Include="img\patterns\small\diagonal-noise.png" />
+    <Content Include="img\patterns\small\dust%402x.png" />
+    <Content Include="img\patterns\small\dust.png" />
+    <Content Include="img\patterns\small\fabric-plaid%402x.png" />
+    <Content Include="img\patterns\small\fabric-plaid.png" />
+    <Content Include="img\patterns\small\farmer%402x.png" />
+    <Content Include="img\patterns\small\farmer.png" />
+    <Content Include="img\patterns\small\grid-noise%402x.png" />
+    <Content Include="img\patterns\small\grid-noise.png" />
+    <Content Include="img\patterns\small\lghtmesh%402x.png" />
+    <Content Include="img\patterns\small\lghtmesh.png" />
+    <Content Include="img\patterns\small\no-pattern%402x.png" />
+    <Content Include="img\patterns\small\no-pattern.png" />
+    <Content Include="img\patterns\small\pw-maze-white%402x.png" />
+    <Content Include="img\patterns\small\pw-maze-white.png" />
+    <Content Include="img\photos\angie-blair-original.png" />
+    <Content Include="img\photos\emma-hearth-original.png" />
+    <Content Include="img\photos\emma-large.png" />
+    <Content Include="img\photos\emma-small.png" />
+    <Content Include="img\photos\john-doe-original.png" />
+    <Content Include="img\photos\john-small.png" />
+    <Content Include="img\photos\logo-love-letters.png" />
+    <Content Include="img\photos\logo-royal-markt.png" />
+    <Content Include="img\photos\logo-shuba.png" />
+    <Content Include="img\photos\logo-sokolov.png" />
+    <Content Include="img\photos\logo-sunsynk.png" />
+    <Content Include="img\radio%402x.png" />
+    <Content Include="img\radio-open%402x.png" />
+    <Content Include="img\radio-open.png" />
+    <Content Include="img\radio.png" />
+    <Content Include="img\share\facebook%402x.png" />
+    <Content Include="img\share\facebook.png" />
+    <Content Include="img\share\flickr%402x.png" />
+    <Content Include="img\share\flickr.png" />
+    <Content Include="img\share\google%402x.png" />
+    <Content Include="img\share\google.png" />
+    <Content Include="img\share\linkedin%402x.png" />
+    <Content Include="img\share\linkedin.png" />
+    <Content Include="img\share\twitter%402x.png" />
+    <Content Include="img\share\twitter.png" />
+    <Content Include="img\share\vimeo%402x.png" />
+    <Content Include="img\share\vimeo.png" />
+    <Content Include="img\tmp\property-large-1.jpg" />
+    <Content Include="img\tmp\property-large-2.jpg" />
+    <Content Include="img\tmp\property-large-3.jpg" />
+    <Content Include="img\tmp\property-large-4.jpg" />
+    <Content Include="img\tmp\property-small-1.png" />
+    <Content Include="img\tmp\property-small-2.png" />
+    <Content Include="img\tmp\property-small-3.png" />
+    <Content Include="img\tmp\property-small-4.png" />
+    <Content Include="img\tmp\property-small-5.png" />
+    <Content Include="img\tmp\property-small-6.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\carousel.js" />
+    <Content Include="js\gmap3.infobox.min.js" />
+    <Content Include="js\gmap3.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.currency.js" />
+    <Content Include="js\jquery.ezmark.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\realia.js" />
+    <Content Include="js\retina.js" />
+    <Content Include="Resimler\Danisman\re860.jpg" />
+    <Content Include="Resimler\Danisman\resi3999.jpg" />
+    <Content Include="Resimler\Danisman\resimyok.jpg" />
+    <Content Include="Resimler\ilan\150\264201401053731.jpg" />
+    <Content Include="Resimler\ilan\150\264201401153678.jpg" />
+    <Content Include="Resimler\ilan\150\264201401239600.jpg" />
+    <Content Include="Resimler\ilan\150\264201401339453.jpg" />
+    <Content Include="Resimler\ilan\150\26420141425415.jpg" />
+    <Content Include="Resimler\ilan\150\resimyok.jpg" />
+    <Content Include="Resimler\ilan\800\264201401053731.jpg" />
+    <Content Include="Resimler\ilan\800\264201401153678.jpg" />
+    <Content Include="Resimler\ilan\800\264201401239600.jpg" />
+    <Content Include="Resimler\ilan\800\264201401339453.jpg" />
+    <Content Include="Resimler\ilan\800\26420141425415.jpg" />
+    <Content Include="Resimler\ilan\800\resimyok.jpg" />
+    <Content Include="Resimler\resimyok.jpg" />
+    <Content Include="Resimler\sitelogo.png" />
+    <Content Include="Sayfabulunamadi.aspx" />
+    <Content Include="SayfaDetay.aspx" />
+    <Content Include="uploadify\expressInstall.swf" />
+    <Content Include="uploadify\jquery-1.3.2.min.js" />
+    <Content Include="uploadify\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="uploadify\swfobject.js" />
+    <Content Include="uploadify\uploadify.css" />
+    <Content Include="uploadify\uploadify.swf" />
+    <Content Include="uploadify\_notes\dwsync.xml" />
+    <Content Include="user\DetayliArama.ascx" />
+    <Content Include="user\userAltilan.ascx" />
+    <Content Include="user\userMenu.ascx" />
+    <Content Include="user\UserSagAlt.ascx" />
+    <Content Include="user\userSagilanYeni.ascx" />
+    <Content Include="user\userSagUst.ascx" />
+    <Content Include="user\userSlider.ascx" />
+    <Content Include="user\userOrtailan.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ilan.aspx" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="yonetim\Ayarlar.aspx" />
+    <Content Include="yonetim\Danismanlar.aspx" />
+    <Content Include="yonetim\Default.aspx" />
+    <Content Include="yonetim\Gkiralik.aspx" />
+    <Content Include="yonetim\HaberEkle.aspx" />
+    <Content Include="yonetim\Haberler.aspx" />
+    <Content Include="yonetim\ilanekle.aspx" />
+    <Content Include="yonetim\ilanguncelle.aspx" />
+    <Content Include="yonetim\ilanlar.aspx" />
+    <Content Include="yonetim\iletisim.aspx" />
+    <Content Include="yonetim\images\140x140.gif" />
+    <Content Include="yonetim\images\170x170.gif" />
+    <Content Include="yonetim\images\add.png" />
+    <Content Include="yonetim\images\background.png" />
+    <Content Include="yonetim\images\black-Linen.png" />
+    <Content Include="yonetim\images\blue-paper.png" />
+    <Content Include="yonetim\images\extra_clean_paper.png" />
+    <Content Include="yonetim\images\furley_bg.png" />
+    <Content Include="yonetim\images\onay.png" />
+    <Content Include="yonetim\images\onaykaldir.png" />
+    <Content Include="yonetim\images\subtle_surface.png" />
+    <Content Include="yonetim\images\yukleniyor.gif" />
+    <Content Include="yonetim\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="yonetim\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="yonetim\lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="yonetim\lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="yonetim\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="yonetim\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="yonetim\lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="yonetim\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\css\site.css" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="yonetim\lib\font-awesome\docs\index.html" />
+    <Content Include="yonetim\lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\changelog.txt" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\agenda-views.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\basic-views.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\cupertino\theme.css" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\default.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\external-dragging.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\gcal.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\json.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\selectable.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\theme.html" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.css" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.js" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.min.js" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.print.css" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\fullcalendar\gcal.js" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\GPL-LICENSE.txt" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\jquery\jquery-1.7.1.min.js" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
+    <Content Include="yonetim\lib\jquery-1.7.2.min.js" />
+    <Content Include="yonetim\lib\jquery-1.8.1.min.js" />
+    <Content Include="yonetim\lib\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="yonetim\lib\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="yonetim\lib\lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="yonetim\lib\lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="yonetim\lib\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="yonetim\lib\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\css\site.css" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\index.html" />
+    <Content Include="yonetim\lib\lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\changelog.txt" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\agenda-views.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\basic-views.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\cupertino\theme.css" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\default.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\external-dragging.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\gcal.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\json.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\selectable.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\theme.html" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.css" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.js" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.min.js" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.print.css" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\fullcalendar\gcal.js" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\GPL-LICENSE.txt" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\jquery\jquery-1.7.1.min.js" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
+    <Content Include="yonetim\lib\lib\jquery-1.7.2.min.js" />
+    <Content Include="yonetim\lib\lib\jquery-1.8.1.min.js" />
+    <Content Include="yonetim\Login.aspx" />
+    <Content Include="yonetim\Profilim.aspx" />
+    <Content Include="yonetim\Resim.aspx" />
+    <Content Include="yonetim\SayfaEkle.aspx" />
+    <Content Include="yonetim\Sayfalar.aspx" />
+    <Content Include="yonetim\Seo.aspx" />
+    <Content Include="yonetim\SifremiUnuttum.aspx" />
+    <Content Include="yonetim\stylesheets\elements.css" />
+    <Content Include="yonetim\stylesheets\theme.css" />
+    <Content Include="yonetim\Temalar.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaSite.Master.cs">
+      <DependentUpon>AnaSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnaSite.Master.designer.cs">
+      <DependentUpon>AnaSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Ara.aspx.cs">
+      <DependentUpon>Ara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ara.aspx.designer.cs">
+      <DependentUpon>Ara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Basvuru.aspx.cs">
+      <DependentUpon>Basvuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Basvuru.aspx.designer.cs">
+      <DependentUpon>Basvuru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="class\baglanti.cs" />
+    <Compile Include="class\Kontrol.cs" />
+    <Compile Include="class\Msg.cs" />
+    <Compile Include="DanismanDetay.aspx.cs">
+      <DependentUpon>DanismanDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanismanDetay.aspx.designer.cs">
+      <DependentUpon>DanismanDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danismanlar.aspx.cs">
+      <DependentUpon>Danismanlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danismanlar.aspx.designer.cs">
+      <DependentUpon>Danismanlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Haberler.aspx.cs">
+      <DependentUpon>Haberler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler.aspx.designer.cs">
+      <DependentUpon>Haberler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ilandetay.aspx.cs">
+      <DependentUpon>ilandetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ilandetay.aspx.designer.cs">
+      <DependentUpon>ilandetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msDetay.Master.cs">
+      <DependentUpon>msDetay.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msDetay.Master.designer.cs">
+      <DependentUpon>msDetay.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sayfabulunamadi.aspx.cs">
+      <DependentUpon>Sayfabulunamadi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sayfabulunamadi.aspx.designer.cs">
+      <DependentUpon>Sayfabulunamadi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SayfaDetay.aspx.cs">
+      <DependentUpon>SayfaDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SayfaDetay.aspx.designer.cs">
+      <DependentUpon>SayfaDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\DetayliArama.ascx.cs">
+      <DependentUpon>DetayliArama.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\DetayliArama.ascx.designer.cs">
+      <DependentUpon>DetayliArama.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userAltilan.ascx.cs">
+      <DependentUpon>userAltilan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userAltilan.ascx.designer.cs">
+      <DependentUpon>userAltilan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userMenu.ascx.cs">
+      <DependentUpon>userMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userMenu.ascx.designer.cs">
+      <DependentUpon>userMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\UserSagAlt.ascx.cs">
+      <DependentUpon>UserSagAlt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\UserSagAlt.ascx.designer.cs">
+      <DependentUpon>UserSagAlt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userSagilanYeni.ascx.cs">
+      <DependentUpon>userSagilanYeni.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userSagilanYeni.ascx.designer.cs">
+      <DependentUpon>userSagilanYeni.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userSagUst.ascx.cs">
+      <DependentUpon>userSagUst.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userSagUst.ascx.designer.cs">
+      <DependentUpon>userSagUst.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userSlider.ascx.cs">
+      <DependentUpon>userSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userSlider.ascx.designer.cs">
+      <DependentUpon>userSlider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userOrtailan.ascx.cs">
+      <DependentUpon>userOrtailan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userOrtailan.ascx.designer.cs">
+      <DependentUpon>userOrtailan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ilan.aspx.cs">
+      <DependentUpon>ilan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ilan.aspx.designer.cs">
+      <DependentUpon>ilan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\AnaPage.Master.cs">
+      <DependentUpon>AnaPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\AnaPage.Master.designer.cs">
+      <DependentUpon>AnaPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Ayarlar.aspx.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Ayarlar.aspx.designer.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Danismanlar.aspx.cs">
+      <DependentUpon>Danismanlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Danismanlar.aspx.designer.cs">
+      <DependentUpon>Danismanlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Gkiralik.aspx.cs">
+      <DependentUpon>Gkiralik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Gkiralik.aspx.designer.cs">
+      <DependentUpon>Gkiralik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\HaberEkle.aspx.cs">
+      <DependentUpon>HaberEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\HaberEkle.aspx.designer.cs">
+      <DependentUpon>HaberEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Haberler.aspx.cs">
+      <DependentUpon>Haberler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Haberler.aspx.designer.cs">
+      <DependentUpon>Haberler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\ilanekle.aspx.cs">
+      <DependentUpon>ilanekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\ilanekle.aspx.designer.cs">
+      <DependentUpon>ilanekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\ilanguncelle.aspx.cs">
+      <DependentUpon>ilanguncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\ilanguncelle.aspx.designer.cs">
+      <DependentUpon>ilanguncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\ilanlar.aspx.cs">
+      <DependentUpon>ilanlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\ilanlar.aspx.designer.cs">
+      <DependentUpon>ilanlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Profilim.aspx.cs">
+      <DependentUpon>Profilim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Profilim.aspx.designer.cs">
+      <DependentUpon>Profilim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Resim.aspx.cs">
+      <DependentUpon>Resim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Resim.aspx.designer.cs">
+      <DependentUpon>Resim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\SayfaEkle.aspx.cs">
+      <DependentUpon>SayfaEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\SayfaEkle.aspx.designer.cs">
+      <DependentUpon>SayfaEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Sayfalar.aspx.cs">
+      <DependentUpon>Sayfalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Sayfalar.aspx.designer.cs">
+      <DependentUpon>Sayfalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Seo.aspx.cs">
+      <DependentUpon>Seo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Seo.aspx.designer.cs">
+      <DependentUpon>Seo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\SifremiUnuttum.aspx.cs">
+      <DependentUpon>SifremiUnuttum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\SifremiUnuttum.aspx.designer.cs">
+      <DependentUpon>SifremiUnuttum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetim\Temalar.aspx.cs">
+      <DependentUpon>Temalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetim\Temalar.aspx.designer.cs">
+      <DependentUpon>Temalar.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnaSite.Master" />
+    <Content Include="msDetay.Master" />
+    <Content Include="Upload.ashx" />
+    <None Include="Properties\PublishProfiles\sa.pubxml" />
+    <None Include="Properties\PublishProfiles\Web.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="yonetim\AnaPage.Master" />
+    <Content Include="yonetim\lib\.DS_Store" />
+    <Content Include="yonetim\lib\font-awesome\.gitignore" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\font-awesome.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\font-site.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\mixins.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\site.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <Content Include="yonetim\lib\font-awesome\docs\assets\less\variables.less" />
+    <Content Include="yonetim\lib\font-awesome\FontAwesome-Vectors.pdf" />
+    <Content Include="yonetim\lib\font-awesome\FontAwesome.ttf" />
+    <Content Include="yonetim\lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="yonetim\lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="yonetim\lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="yonetim\lib\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="yonetim\lib\font-awesome\less\font-awesome.less" />
+    <Content Include="yonetim\lib\font-awesome\README.md" />
+    <Content Include="yonetim\lib\font-awesome\sass\font-awesome.sass" />
+    <Content Include="yonetim\lib\font-awesome\sass\font-awesome.scss" />
+    <Content Include="yonetim\lib\fullcalendar-1.5.3\demos\json-events.php" />
+    <Content Include="yonetim\lib\lib\.DS_Store" />
+    <Content Include="yonetim\lib\lib\font-awesome\.gitignore" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\font-awesome.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\font-site.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\mixins.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\site.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\docs\assets\less\variables.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\FontAwesome-Vectors.pdf" />
+    <Content Include="yonetim\lib\lib\font-awesome\FontAwesome.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="yonetim\lib\lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="yonetim\lib\lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="yonetim\lib\lib\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\less\font-awesome.less" />
+    <Content Include="yonetim\lib\lib\font-awesome\README.md" />
+    <Content Include="yonetim\lib\lib\font-awesome\sass\font-awesome.sass" />
+    <Content Include="yonetim\lib\lib\font-awesome\sass\font-awesome.scss" />
+    <Content Include="yonetim\lib\lib\fullcalendar-1.5.3\demos\json-events.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resimler\finder\flash\" />
+    <Folder Include="Resimler\finder\images\" />
+    <Folder Include="Resimler\Temp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:42953/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

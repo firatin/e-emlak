@@ -1,0 +1,15 @@
+C:\Users\Pc\Desktop\WEBEmlak\WEBEmlak\bin\WEBEmlak.dll
+C:\Users\Pc\Desktop\WEBEmlak\WEBEmlak\bin\WEBEmlak.pdb
+C:\Users\Pc\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.csprojResolveAssemblyReference.cache
+C:\Users\Pc\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.dll
+C:\Users\Pc\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.pdb
+C:\Users\UNİT-3\Desktop\WEBEmlak\WEBEmlak\bin\WEBEmlak.dll
+C:\Users\UNİT-3\Desktop\WEBEmlak\WEBEmlak\bin\WEBEmlak.pdb
+C:\Users\UNİT-3\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.csprojResolveAssemblyReference.cache
+C:\Users\UNİT-3\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.dll
+C:\Users\UNİT-3\Desktop\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.pdb
+C:\Users\UNİT-3\Desktop\UNİT\WEBEmlak\WEBEmlak\bin\WEBEmlak.dll
+C:\Users\UNİT-3\Desktop\UNİT\WEBEmlak\WEBEmlak\bin\WEBEmlak.pdb
+C:\Users\UNİT-3\Desktop\UNİT\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.csprojResolveAssemblyReference.cache
+C:\Users\UNİT-3\Desktop\UNİT\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.dll
+C:\Users\UNİT-3\Desktop\UNİT\WEBEmlak\WEBEmlak\obj\Release\WEBEmlak.pdb

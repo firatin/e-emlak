@@ -1,0 +1,432 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnaSite.master.cs" Inherits="WEBEmlak.AnaSite" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+   <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" />
+    <link rel="stylesheet" href="/libraries/chosen/chosen.css" type="text/css" />
+    <link rel="stylesheet" href="/libraries/bootstrap-fileupload/bootstrap-fileupload.css" type="text/css" />
+    <link rel="stylesheet" href="/libraries/jquery-ui-1.10.2.custom/css/ui-lightness/jquery-ui-1.10.2.custom.min.css" type="text/css" />
+   <%-- <link rel="stylesheet" href="/css/realia-blue.css" type="text/css" />--%>
+    <link rel="stylesheet" href="#" type="text/css" />
+
+     
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+        <div id="wrapper-outer">
+            <div id="wrapper">
+                <div id="wrapper-inner">
+                    <!-- BREADCRUMB -->
+
+
+                    <!-- HEADER -->
+                    <div id="header-wrapper">
+                        <div id="header">
+                            <div id="header-inner">
+                                <div class="container">
+                                    <div class="navbar">
+                                        <div class="navbar-inner">
+                                            <div class="row">
+                                                <div class="logo-wrapper span4">
+                                                    <a href="#nav" class="hidden-desktop" id="btn-nav"></a>
+                                                    
+                                                    <div style="max-width:180px" class="logo" id="divLogo" runat="server" visible="false">
+                                                        <a href="/Default.aspx" title="Home">
+                                                            <img src="/Resimler/<%=Logo%>" alt="<%=Title%>"  title="<%=Title%>" width="180px">
+                                                        </a>
+                                                    </div>
+                                                    <!-- /.logo -->
+
+                                                    
+                                                </div>
+                                                <!-- /.logo-wrapper -->
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NAVIGATION -->
+                    <div id="navigation">
+                        <div class="container">
+                            <div class="navigation-wrapper">
+                                <div class="navigation clearfix-normal">
+
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="Default.aspx">Anasayfa</a>
+                                        </li>
+                                        <%--<ul class="nav">--%>
+                                        <li class="menuparent">
+                                            <span class="menuparent nolink">İlanlar</span>
+                                            <ul>
+                                                <li><a href="/ilan.aspx?ilan=konut">Konut</a></li>
+                                                <li><a href="/ilan.aspx?ilan=gunluk">Günlük Kiralık</a></li>
+                                                <li><a href="/ilan.aspx?ilan=isyeri">İş Yeri</a></li>
+                                                <li><a href="/ilan.aspx?ilan=arsa">Arsa</a></li>
+                                                
+                                                
+
+                                            </ul>
+                                        </li>
+
+
+
+                                        <li class="menuparent">
+                                            <span class="menuparent nolink">Danışmanlar</span>
+                                            <ul>
+                                                <li><a href="Danismanlar.aspx">Danışmanlarımız</a></li>
+                                                <li><a href="Basvuru.aspx">Danışmanlık Basvurusu</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li>
+                                            <a href="Haberler.aspx">Haberler</a>
+                                        </li>
+                                        <li class="menuparent">
+                                            <span class="menuparent nolink">Hakkımızda</span>
+                                            <ul>
+                                                <asp:Repeater ID="RpSayfalar" runat="server">
+                                                    <ItemTemplate>
+                                                        <li><a href="/<%#Kontrol.UrlSeo(Eval("HaberAdi").ToString().ToLower())%>-<%#Eval("HaberId")%>"><%#Eval("HaberAdi")%></a></li>
+
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+
+                                            </ul>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="iletisim.aspx">Bize Ulaşın</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav -->
+
+
+
+                                    <div class="content">
+                                        <div class="site-search">
+                                            <asp:TextBox ID="txtAra" runat="server"></asp:TextBox> 
+                                      <asp:Button ID="btnAra" runat="server" Text="Ara" Width="83px" BorderStyle="None" OnClick="btnAra_Click" Height="40px" class="btn" Font-Bold="True"  ForeColor="Black" />
+                                             <%-- <button type="submit" class="btn" id="btnAra"><i class="icon-search"></i></button>--%>
+
+                                        </div>
+                                        <!-- /.site-search -->
+                                    </div>
+                                    <%-- <form method="get" class="site-search" action="?">
+                                <div class="input-append">
+                                    <input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" name=""/>
+                                    <button type="submit" class="btn"><i class="icon-search"></i></button>
+                                </div><!-- /.input-append -->
+                            </form><!-- /.site-search -->--%>
+                                </div>
+                                <!-- /.navigation -->
+                            </div>
+                            <!-- /.navigation-wrapper -->
+                        </div>
+                        <!-- /.container -->
+                    </div>
+                    <!-- /.navigation -->
+
+                    <!-- CONTENT -->
+                    <div id="content">
+                        <div class="container">
+                            <div id="main">
+                                <asp:ContentPlaceHolder ID="CntSlider" runat="server">
+                                </asp:ContentPlaceHolder>
+
+                                <!-- /.slider-wrapper -->
+
+                                <div class="row">
+                                    <div class="span9">
+                                        <h1 class="page-header">
+                                            <asp:Label ID="lblBilgi" runat="server" Text=" "></asp:Label>
+                                        </h1>
+                                        <asp:ContentPlaceHolder ID="CntUserOrtailan" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                        <!-- /.properties-grid -->
+                                    </div>
+                                    <div class="sidebar span3">
+                                        <!-- /.our-agents -->
+                                        <asp:ContentPlaceHolder ID="CntUserSagAlt" runat="server">
+                                        </asp:ContentPlaceHolder>
+
+                                 
+
+                                        <div class="hidden-tablet">
+                                            <div class="widget properties last">
+                                                 <br />
+                                                <div class="title">
+                                                   
+                                                    <h2>Yeni İlanlar </h2>
+                                                </div>
+                                                <!-- /.title -->
+                                                <asp:Repeater ID="RpYeniilan" runat="server">
+                                                    <ItemTemplate>
+
+                                                        <div class="content">
+                                                            <div class="property">
+                                                                <div class="image">
+                                                                    <a href="/<%#Eval("ilanId")%>-<%#Kontrol.UrlSeo(Eval("ilanAdi").ToString().ToLower())%>.html" title="<%#Eval("ilanAdi")%>"></a>
+                                                                    <img src="../Resimler/ilan/800/<%#Eval("AnaResim150")%>" alt="<%#Eval("ilanAdi")%>" title="<%#Eval("ilanAdi")%>" class="rsmkck">
+                                                                </div>
+                                                                <!-- /.image -->
+
+                                                                <div class="wrapper">
+                                                                    <div class="title">
+                                                                        <h3>
+                                                                            <a href="/<%#Eval("ilanId")%>-<%#Kontrol.UrlSeo(Eval("ilanAdi").ToString().ToLower())%>.html" title="<%#Eval("ilanAdi")%>"><%#Eval("kisaad")%></a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    <!-- /.title -->
+                                                                    <div class="price"><%#Eval("Fiyat","{0:c}")%></div>
+                                                                    <!-- /.price -->
+                                                                    <div class="location"><%#Eval("Metrekare")%>m<sup>2</sup></div>
+                                                                    <!-- /.location -->
+                                                                </div>
+                                                                <!-- /.wrapper -->
+                                                            </div>
+                                                            <!-- /.property -->
+
+                                                        </div>
+                                                        <!-- /.content -->
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+
+                                            </div>
+                                            <!-- /.properties -->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <asp:ContentPlaceHolder ID="CntUserAltilan" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <!-- /.carousel -->
+                                <div class="features">
+                                </div>
+                                <!-- /.features -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <div id="footer-wrapper">
+    <div id="footer-top">
+        <div id="footer-top-inner" class="container">
+            <div class="row">
+                <div class="widget properties span3">
+                    <div class="title">
+                        <h2>Rastgele İlanlar</h2>
+                    </div><!-- /.title -->
+
+                                    <!-- /.title -->
+
+
+                                    <div class="content">
+                                        <asp:Repeater ID="RpRastgele" runat="server">
+                                            <ItemTemplate>
+                                                <div class="property">
+                                                    <div class="image">
+                                                        <a href="/<%#Eval("ilanId")%>-<%#Kontrol.UrlSeo(Eval("ilanAdi").ToString().ToLower())%>.html" title="<%#Eval("ilanAdi")%>"></a>
+                                                        <img src="../Resimler/ilan/150/<%#Eval("AnaResim150")%>" alt="<%#Eval("ilanAdi")%>" title="<%#Eval("ilanAdi")%>" class="rsmkck" alt="" />
+                                                    </div>
+                                                    <!-- /.image -->
+                                                    <div class="wrapper">
+                                                        <div class="title">
+                                                            <h3>
+                                                                <a href="/<%#Eval("ilanId")%>-<%#Kontrol.UrlSeo(Eval("ilanAdi").ToString().ToLower())%>.html" title="<%#Eval("ilanAdi")%>"><%#Eval("kisaad")%></a>
+                                                            </h3>
+                                                        </div>
+                                                        <!-- /.title -->
+                                                        <%--  <div class="location">Sehir</div><!-- /.location -->--%>
+                                                        <div class="price"><%#Eval("Fiyat","{0:c}")%></div>
+                                                        <!-- /.price -->
+                                                    </div>
+                                                    <!-- /.wrapper -->
+                                                </div>
+                                                <!-- /.property -->
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+                                    <!-- /.content -->
+                                </div>
+                                <!-- /.properties-small -->
+
+
+                                <div class="widget span3">
+                                    <div class="title">
+                                        <h2>Hakkımızda</h2>
+                                    </div>
+                                    <!-- /.title -->
+
+                                    <div class="content">
+                                        <table class="contact">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="phone">Gsm:</th>
+                                                    <td><asp:Label ID="lblGsm" runat="server"></asp:Label></td>
+            </td>
+                                                </tr>
+                                                 <tr>
+                                                    <th class="phone">Tel:</th>
+                                                    <td> <asp:Label ID="lblTel" runat="server"></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="email">Email:</th>
+                                                    <td><asp:Label ID="lblMail" runat="server"></asp:Label></td>
+                                                </tr>
+                                               
+                                                <tr>
+                                                    <th class="email">Faks:</th>
+                                                    <td><asp:Label ID="lblFax" runat="server"></asp:Label></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="address">Adres:</th>
+                                                    <td><asp:Label ID="lblAdres" runat="server"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.content -->
+                                </div>
+                                <!-- /.widget -->
+
+                                <div class="widget span3">
+                                    <div class="title">
+                                        <h2 class="block-title">Hızlı Erişim</h2>
+                                    </div>
+                                    <!-- /.title -->
+
+                                    <div class="content">
+                                        <ul class="menu nav">
+                                            <li class="leaf"><a href="Danismanlar.aspx">Danismanlar</a></li>
+                                            <li class="leaf"><a href="Haberler.aspx">Haberler</a></li>
+                                            <li><a href="/ilan.aspx?ilan=konut">Konut</a></li>
+                                            <li><a href="/ilan.aspx?ilan=isyeri">İş Yeri</a></li>
+                                            <li><a href="/ilan.aspx?ilan=arsa">Arsa</a></li>
+
+                                            <li class="first leaf"><a href="iletisim.aspx">İletişim</a></li>
+
+
+                                        </ul>
+                                    </div>
+                                    <!-- /.content -->
+                                </div>
+                                <!-- /.widget -->
+
+                                    <!-- /.title -->
+       <div class="widget properties span3">
+
+                                    <div class="title">
+
+
+
+                                        <h2>Danışmanlar</h2>
+                                    </div>
+                                    <!-- /.title -->
+
+
+                                    <div class="content">
+                                        <asp:Repeater ID="rpDanisman" runat="server">
+                                            <ItemTemplate>
+                                                <div class="property">
+                                                    <div class="image">
+                                                        <a href="/danisman-<%#Eval("DanismanId")%>-<%#Kontrol.UrlSeo(Eval("AdSoyad").ToString().ToLower())%>" title="<%#Eval("AdSoyad")%>"></a>
+                                                        <img src="../Resimler/Danisman/<%#Eval("ResimYolu")%>" alt="<%#Eval("AdSoyad")%>" title="<%#Eval("AdSoyad")%>" class="rsmkck" alt="" />
+                                                    </div>
+                                                    <!-- /.image -->
+                                                    <div class="wrapper">
+                                                        <div class="title">
+                                                            <h3>
+                                                                <a href="/danisman-<%#Eval("DanismanId")%>-<%#Kontrol.UrlSeo(Eval("AdSoyad").ToString().ToLower())%>" title="<%#Eval("AdSoyad")%>"><%#Eval("AdSoyad")%></a>
+                                                            </h3>
+                                                        </div>
+                                                        <!-- /.title -->
+                                                        <%--  <div class="location">Sehir</div><!-- /.location -->--%>
+                                                        <div class="price"><%#Eval("mail")%></div>
+                                                         <div class="price"><%#Eval("tel")%></div>
+                                                         <div class="price"><%#Eval("gsm")%></div>
+                                                        <!-- /.price -->
+                                                    </div>
+                                                    <!-- /.wrapper -->
+                                                </div>
+                                                <!-- /.property -->
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+                                    <!-- /.content -->
+                                </div>
+                                   
+                              
+
+                                    <!-- /.content -->
+                                
+                                <!-- /.widget -->
+                           </div>
+                            
+                            <!-- /.row -->
+                        </div>
+                        <!-- /#footer-top-inner -->
+                    </div>
+                    <!-- /#footer-top -->
+                    
+                    <div id="footer" class="footer container">
+                        <div id="footer-inner">
+                            <div class="row">
+                                <div class="span6 copyright">
+                                    <p>© Copyright 2014 by <a href="http://www.unityazilim.com">UnitYazilim</a></p>
+                                </div>
+                                <!-- /.copyright -->
+
+                                <div class="span6 share">
+                                    <div class="content">
+                                        <ul class="menu nav">
+                                            <li class="first leaf"><a href="<%=face%>" target="_blank" class="facebook">Facebook</a></li>
+                                            <li class="leaf"><a href="<%=twit%>" target="_blank" class="twitter">Twitter</a></li>
+
+                               </ul>
+                    </div><!-- /.content -->
+                </div><!-- /.span6 -->
+            </div><!-- /.row -->
+        </div><!-- /#footer-inner -->
+    </div><!-- /#footer -->
+</div><!-- /#footer-wrapper -->
+</div><!-- /#wrapper -->
+</div><!-- /#wrapper-outer -->
+        
+
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=true"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/jquery.ezmark.js"></script>
+        <script type="text/javascript" src="/js/jquery.currency.js"></script>
+        <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/js/retina.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/carousel.js"></script>
+        <script type="text/javascript" src="/js/gmap3.min.js"></script>
+        <script type="text/javascript" src="/js/gmap3.infobox.min.js"></script>
+        <script type="text/javascript" src="/libraries/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js"></script>
+        <script type="text/javascript" src="/libraries/chosen/chosen.jquery.min.js"></script>
+        <script type="text/javascript" src="/libraries/iosslider/_src/jquery.iosslider.min.js"></script>
+        <script type="text/javascript" src="/libraries/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+        <script type="text/javascript" src="/js/realia.js"></script>
+    </form>
+</body>
+</html>

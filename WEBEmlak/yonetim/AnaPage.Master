@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnaPage.master.cs" Inherits="WEBEmlak.yonetim.AnaPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Yönetim Paneli</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+
+    <script src="lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+      <link href="/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/uploadify/swfobject.js"></script>
+    
+    <script type="text/javascript" src="/uploadify/jquery.uploadify.v2.1.0.min.js"></script>
+
+    <style type="text/css">
+        #line-chart {
+            height: 300px;
+            width: 800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+
+        .brand {
+            font-family: georgia, serif;
+        }
+
+            .brand .first {
+                color: #ccc;
+                font-style: italic;
+            }
+
+            .brand .second {
+                color: #fff;
+                font-weight: bold;
+            }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+
+        <body class="">
+            <!--<![endif]-->
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <ul class="nav pull-right">
+
+                        <li id="fat-menu" class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-user"></i>
+                                <asp:Label ID="lblAdmin" runat="server" Text="Label"></asp:Label>
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="Profilim.aspx">Profilim</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="-1" class="visible-phone" href="#">Ayarlarım</a></li>
+                                <li class="divider visible-phone"></li>
+                                <li><a tabindex="-1">
+                                    <asp:LinkButton ID="lnkCikis" runat="server" OnClick="lnkCikis_Click">Güvenli Çıkış</asp:LinkButton></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a class="brand" href="../Default.aspx" target="_blank"><span class="second">Siteye Git</span></a>
+                </div>
+            </div>
+
+            <div class="sidebar-nav">
+
+                <a href="Default.aspx" class="nav-header"><i class="icon-dashboard"></i>Ana Sayfa</a>
+                <div id="divAdmin" runat="server">
+                <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>İşlemler<i class="icon-chevron-up"></i></a>
+                <ul id="dashboard-menu" class="nav nav-list collapse in" >
+                    <li><a href="Seo.aspx">Seo Ayarları</a></li>
+                    <li><a href="iletisim.aspx">İletişim Ayarları</a></li>
+                    <li><a href="Ayarlar.aspx">Sms Ayarları</a></li>
+                    <li><a href="Haberler.aspx">Haberler</a></li>
+                    <li><a href="Sayfalar.aspx">Sayfalar</a></li>
+                    <li><a href="Danismanlar.aspx">Danışmanlar</a></li>
+                     <li><a href="Temalar.aspx">Temalar</a></li>
+
+                </ul>
+                    </div>
+                <a href="#Ul1" class="nav-header collapsed" data-toggle="collapse"><i class="icon-dashboard"></i>İlanlar<i class="icon-chevron-up"></i></a>
+                <ul id="Ul1" class="nav nav-list collapse in">
+                    <li><a href="ilanlar.aspx">Tüm İlanlar</a></li>
+                    <li><a href="ilanekle.aspx?Tur=1">Konut İlanı Ekle</a></li>
+                    <li><a href="ilanekle.aspx?Tur=2">İşyeri İlanı Ekle</a></li>
+                    <li><a href="ilanekle.aspx?Tur=3">Arsa İlanı Ekle</a></li>
+                     <li><a href="Gkiralik.aspx">Günlük Başvurular</a></li>
+
+
+                </ul>
+                <a href="#error-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-exclamation-sign"></i>Profilim<i class="icon-chevron-up"></i></a>
+                <ul id="error-menu" class="nav nav-list collapse">
+                    <li><a href="Profilim.aspx">Profilim</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="content">
+
+                <div class="header">
+
+                    <h1 class="page-title"></h1>
+                </div>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <asp:Label ID="lblBilgi" runat="server" Font-Size="Large"></asp:Label><span class="divider"></span></li>
+
+                </ul>
+
+                <div class="container-fluid">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <script src="lib/bootstrap/js/bootstrap.js"></script>
+            <script type="text/javascript">
+                $("[rel=tooltip]").tooltip();
+                $(function () {
+                    $('.demo-cancel-click').click(function () { return false; });
+                });
+            </script>
+
+        </body>
+    </form>
+</body>
+</html>
